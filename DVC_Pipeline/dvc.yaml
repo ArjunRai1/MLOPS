@@ -25,5 +25,5 @@ stages:
     - .\src\model_evaluation.py
     - data/processed
     - model.pkl
-    outs:
+    metrics:
     - metrics.json
