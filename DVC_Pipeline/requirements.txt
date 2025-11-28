@@ -3,6 +3,5 @@ pandas
 dvc
 scikit-learn
 uvicorn
-
 fastapi
 pydantic
