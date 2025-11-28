@@ -2,3 +2,5 @@ numpy
 pandas
 dvc
 scikit-learn
+fastapi
+pydantic
