@@ -4,8 +4,8 @@ from sklearn.ensemble import RandomForestClassifier
 
 train_data = pd.read_csv("./data/processed/train_preprocessed.csv")
 
-X_train = train_data.iloc[:, 0:-1].values
-y_train = train_data.iloc[:, -1].values
+X_train = train_data.drop(columns=['Potability'], axis=1)
+y_train = train_data['Potability']
 
 rf = RandomForestClassifier(n_estimators=50, max_depth=5, min_samples_leaf=5, random_state=42)
 

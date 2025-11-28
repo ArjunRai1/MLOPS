@@ -4,8 +4,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import json
 test_data = pd.read_csv("./data\\processed\\test_preprocessed.csv")
 
-X_test = test_data.iloc[:, 0:-1].values
-y_test = test_data.iloc[:, -1].values
+X_test = test_data.drop(columns=['Potability'], axis=1)
+y_test = test_data['Potability']
 
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
