@@ -25,7 +25,7 @@ def predict(Water: Water):
     "Turbidity": [Water.Turbidity],
     })
 
-    model = pickle.load(open("C:\\Users\\arjun\\Documents\\MLOps\\DVC_Pipeline\\model.pkl", "rb"))
+    model = pickle.load(open("../model.pkl", "rb"))
     prediction = model.predict(sample)
 
     if prediction == 1:
