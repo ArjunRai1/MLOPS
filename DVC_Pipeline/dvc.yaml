@@ -3,6 +3,8 @@ stages:
     cmd: python src/data_collection.py
     deps:
     - src/data_collection.py
+    params:
+    - data_collection.test_size
     outs:
     - data/raw
   data_preprocessing:
@@ -17,6 +19,10 @@ stages:
     deps:
     - data/processed
     - src/model_building.py
+    params:
+    - model_building.n_estimators
+    - model_building.max_depth
+    - model_building.min_samples_leaf
     outs:
     - model.pkl
   model_evaluation:
