@@ -5,8 +5,8 @@ stages:
     deps:
     - path: src/data_collection.py
       hash: md5
-      md5: 543bfa73e8877131c6e2b380e978e81b
-      size: 578
+      md5: 151a043b7844f9e64de18fe90cfc18cd
+      size: 2074
     params:
       params.yaml:
         data_collection.test_size: 0.2
@@ -26,8 +26,8 @@ stages:
       nfiles: 2
     - path: src/data_preprocessing.py
       hash: md5
-      md5: 148ffe4c38a0eb6a3ed351cb85c1dd31
-      size: 670
+      md5: 6df8688b223df822853688142fcf7331
+      size: 1568
     outs:
     - path: data/processed
       hash: md5
@@ -44,8 +44,13 @@ stages:
       nfiles: 2
     - path: src/model_building.py
       hash: md5
-      md5: 8890edeb58307147e94428f7fff0eda0
-      size: 425
+      md5: 3abdca6bd8fb18470e5b82d8120c40e9
+      size: 748
+    params:
+      params.yaml:
+        model_building.max_depth: 5
+        model_building.min_samples_leaf: 5
+        model_building.n_estimators: 50
     outs:
     - path: model.pkl
       hash: md5
