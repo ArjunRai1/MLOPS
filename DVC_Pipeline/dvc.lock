@@ -50,12 +50,12 @@ stages:
       params.yaml:
         model_building.max_depth: 5
         model_building.min_samples_leaf: 5
-        model_building.n_estimators: 50
+        model_building.n_estimators: 55
     outs:
     - path: model.pkl
       hash: md5
-      md5: 4ef6af5303e291fdcc907edf774184c2
-      size: 184296
+      md5: 559db4fd6fb17a1d9da7903d8ea2f58f
+      size: 208470
   model_evaluation:
     cmd: python src/model_evaluation.py
     deps:
@@ -70,10 +70,10 @@ stages:
       nfiles: 2
     - path: model.pkl
       hash: md5
-      md5: 4ef6af5303e291fdcc907edf774184c2
-      size: 184296
+      md5: 559db4fd6fb17a1d9da7903d8ea2f58f
+      size: 208470
     outs:
     - path: metrics.json
       hash: md5
-      md5: 113e7d9cca90fdd79cb6b5ac1b3e6059
-      size: 132
+      md5: 0146ae0ee6afb23c508a1d3449f5bba4
+      size: 146
