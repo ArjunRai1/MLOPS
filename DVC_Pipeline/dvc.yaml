@@ -28,7 +28,7 @@ stages:
   model_evaluation:
     cmd: python src/model_evaluation.py
     deps:
-    - .\src\model_evaluation.py
+    - src/model_evaluation.py
     - data/processed
     - model.pkl
     metrics:

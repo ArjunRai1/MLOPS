@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 
-CMD ["sh", "-lc", "dvc pull && dvc repro"]
+CMD ["sh", "-lc", "git init && dvc pull && dvc repro"]
 
